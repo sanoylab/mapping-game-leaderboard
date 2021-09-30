@@ -1,0 +1,22 @@
+{
+  "name": "mapping-game-report",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "pg": "^8.3.3",
+    "pgtools": "^0.3.0",
+    "postman-request": "^2.88.1-postman.30",
+    "path": "^0.12.7",
+    "express": "^4.17.1",
+    "hbs": "^4.1.2"
+  }
+}
