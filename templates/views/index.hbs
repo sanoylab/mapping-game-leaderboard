@@ -104,26 +104,25 @@
     </div>
 
     <script>
-        const fetchData = (date, format) => {
+        const fetchData = async (date, format) => {
             const title = document.querySelector('#title');
-            fetch('https://mapping-game-report.herokuapp.com/api/leaderboard?date=' + date).then((response) => {
-                response.json().then((data) => {
-                    if (data.error) {
-                        console.log(data.error);
-                    } else {
 
-                        let filtered = data.filter(function (d) {
-                            return new Date(d.created_at).toDateString() == new Date(date).toDateString();
-                        }).map(function (data) {
-                            return ({ name: data.name, count: data.count })
-                        })
-                        render(filtered)
-                        exportData(format, filtered, date)
-                        title.innerHTML = "Leaderboard (" + new Date(date).toDateString() + ")";
-                    }
-                })
+            const response = await fetch('https://mapping-game-report.herokuapp.com/api/leaderboard?date=' + date);
+            const data = await response.json();
 
+            let filtered = data.filter(function (d) {
+                return new Date(d.created_at).toDateString() == new Date(date).toDateString();
+            }).map(function (data) {
+                return ({ name: data.name, count: data.count })
             })
+            render(filtered)
+            exportData(format, filtered, date)
+            title.innerHTML = "Leaderboard (" + new Date(date).toDateString() + ")";
+
+
+
+
+
 
         }
 
