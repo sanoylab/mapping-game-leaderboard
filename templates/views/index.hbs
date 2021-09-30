@@ -106,7 +106,7 @@
     <script>
         const fetchData = (date, format) => {
             const title = document.querySelector('#title');
-            fetch('/api/leaderboard?date=' + date).then((response) => {
+            fetch('https://mapping-game-report.herokuapp.com/api/leaderboard?date=' + date).then((response) => {
                 response.json().then((data) => {
                     if (data.error) {
                         console.log(data.error);
