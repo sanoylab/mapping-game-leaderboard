@@ -12,11 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.2",
+    "path": "^0.12.7",
     "pg": "^8.3.3",
     "pgtools": "^0.3.0",
-    "postman-request": "^2.88.1-postman.30",
-    "path": "^0.12.7",
-    "express": "^4.17.1",
-    "hbs": "^4.1.2"
+    "postman-request": "^2.88.1-postman.30"
   }
 }
