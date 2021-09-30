@@ -2,13 +2,6 @@ const pgtools = require("pgtools");
 const { Pool } = require("pg");
 require("dotenv").config();
 
-const config = {
-  user: process.env.PGUSER,
-  password: process.env.PGPASSWORD,
-  port: process.env.PGPORT,
-  host: process.env.PGHOST,
-};
-
 const pool = new Pool();
 
 const selectLeaderBoard = async (date) => {
