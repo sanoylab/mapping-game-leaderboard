@@ -142,13 +142,13 @@
             if (type === "csv") {
                 CSV = ConvertToCSV(data);
                 let uri = 'data:text/csv;charset=utf-8,' + escape(CSV);
-                saveAs(uri, "Leaderboard (" + new Date(date).toDateString() + ").csv");
+                saveAs(uri, "Mapping Game Leaderboard (" + new Date(date).toDateString() + ").csv");
             } else if (type === "pdf") {
 
                 var element = document.getElementById('leaderboardList');
                 var opt = {
                     margin: 1,
-                    filename: "Leaderboard (" + new Date(date).toDateString() + ").pdf",
+                    filename: "Mapping Game Leaderboard (" + new Date(date).toDateString() + ").pdf",
                     image: { type: 'jpeg', quality: 0.98 },
                     html2canvas: { scale: 2 },
                     jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
